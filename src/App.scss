@@ -1,0 +1,148 @@
+#root {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.App {
+    width: 350px;
+    height: 410px;
+    background: #ffffff;
+    box-shadow: -2px 2px 4px 2px rgba(0, 0, 0, 0.2);
+
+    .text {
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 19px;
+        width: 75px;
+        text-align: center;
+    }
+
+    .choice {
+        height: 70px;
+        margin: 0 30px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        user-select: none;
+
+        .disabled {
+            color: rgba(0, 0, 0, 0.1);
+            transition: all 0.3s;
+
+            &:hover {
+                color: rgba(0, 0, 0, 0.5);
+            }
+        }
+
+        .MuiSwitch-root {
+            padding: 8px;
+
+            .MuiIconButton-label {
+                color: #37466e;
+            }
+
+            .MuiSwitch-colorSecondary.Mui-checked + .MuiSwitch-track {
+                background-color: #37466e;
+            }
+
+            .MuiSwitch-colorSecondary.Mui-checked {
+                color: #37466e;
+            }
+
+            .MuiSwitch-track {
+                border-radius: 10px;
+            }
+        }
+    }
+
+    .content {
+        width: 100%;
+        height: 160px;
+        display: flex;
+
+        .information {
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+            .MuiFormControl-root {
+                .MuiInputBase-root {
+                    font-size: 16px;
+
+                    .MuiOutlinedInput-notchedOutline {
+                        border: 1px solid #37466e;
+                    }
+
+                    .MuiInputBase-input {
+                        padding: 1px 5px !important;
+                    }
+                }
+            }
+
+            .city-time-zone {
+                span {
+                    display: flex;
+                    align-items: center;
+                    font-size: 13px;
+                    line-height: 16px;
+                    color: #37466e;
+                    width: 70px;
+                }
+
+                .date-time {
+                    display: flex;
+                    height: 70px;
+                    align-items: center;
+
+                    .sort-hours {
+                        display: flex;
+                        flex-direction: column;
+
+                        svg {
+                            width: 10px;
+                            color: #37466e;
+                            margin: 0 13px;
+                            user-select: none;
+                        }
+
+                        input {
+                            width: 72px;
+                            height: 29px;
+                            text-align: center;
+                            background: #ffffff;
+                            border: 1px solid #37466e;
+                            box-sizing: border-box;
+                            border-radius: 5px;
+                            outline: none;
+                        }
+
+                        .error {
+                            border: 1px solid red;
+                        }
+                    }
+                }
+
+                .day-utc {
+                    display: flex;
+                }
+            }
+        }
+    }
+}
+
+::-webkit-scrollbar {
+    width: 4px;
+    height: 7px;
+    background-color: rgba(55, 70, 110, .3);
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 2px;
+    background-color: #37466e;
+}
